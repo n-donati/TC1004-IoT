@@ -1,6 +1,6 @@
 {
-  "watch": ["src"],
+  "watch": ["src", ".env"],
   "ext": "ts",
-  "ignore": ["src/**/*¨.spec.ts"],
-  "exec": "ts-node ./src/index.ts"
+  "ignore": ["src/**/*.spec.ts"],
+  "exec": "cross-env NODE_ENV=development ts-node ./src/index.ts"
 }
