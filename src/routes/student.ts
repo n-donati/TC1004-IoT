@@ -6,21 +6,16 @@ import {
   updateStudent,
   deleteStudent,
 } from "../controllers/student";
-import validate from "../middlewares/validate";
-import { studentSchema } from "../schemas/student";
 
 const router = Router();
 
 // Regresa todos los alumnos en la base de datos
 router.get("/", getStudents);
 
-// Crear un alumno nuevo en la BD
-router.post("/", validate(studentSchema), createStudent);
+router.post("/", createStudent);
 
-// Actualizar un alumno de la BD
-router.put("/:id", validate(studentSchema), updateStudent);
+router.put("/:id", updateStudent);
 
-// Eliminar un alumno de la BD
 router.delete("/:id", deleteStudent);
 
 export default router;

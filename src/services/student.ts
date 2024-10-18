@@ -1,17 +1,16 @@
 import { Student } from "../interfaces/student";
 import {
+  deleteStudent,
   findAllStudents,
   insertStudent,
   updateStudent,
-  deleteStudent,
 } from "../models/student";
 
 // Obtener todos los alumnos
-export const findAll = async (limit: number, offset: number) => {
-  return await findAllStudents(limit, offset);
+export const findAll = async () => {
+  return await findAllStudents();
 };
 
-// Crear un nuevo alumno
 export const insert = async (student: Student) => {
   return await insertStudent(student);
 };

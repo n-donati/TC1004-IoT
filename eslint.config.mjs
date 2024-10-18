@@ -7,7 +7,7 @@ export default [
   { ignores: ["dist/"] },
   { files: ["src/**/*.{js,ts,jsx,tsx}"] },
   { files: ["**/*.js"], languageOptions: { sourceType: "commonjs" } },
-  { languageOptions: { globals: globals.node } },
+  { languageOptions: { globals: globals.browser } },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
   eslintPluginPrettierRecommended,

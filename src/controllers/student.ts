@@ -1,26 +1,18 @@
 import { Request, Response } from "express";
 
-import { findAll, insert, update, deleteById } from "../services/student";
+import { deleteById, findAll, insert, update } from "../services/student";
 import { Student } from "../interfaces/student";
 
 // Obtener todos los alumnos
 export const getStudents = async (req: Request, res: Response) => {
   try {
-    // Obtener parámetros de paginación con valores por defecto
-    const page = parseInt(req.query.page as string) || 1;
-    const limit = parseInt(req.query.limit as string) || 5;
-
-    // Calcular offset
-    const offset = (page - 1) * limit;
-
-    const students = await findAll(limit, offset);
+    const students = await findAll();
     res.status(200).json(students);
   } catch (error) {
-    res.status(400).json({ message: "Error al obtener alumnos", error });
+    res.status(500).json({ mensaje: "Error al obtener alumnos", error });
   }
 };
 
-// Crear un nuevo alumno
 export const createStudent = async (req: Request, res: Response) => {
   try {
     const student: Student = req.body;

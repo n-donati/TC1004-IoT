@@ -4,10 +4,9 @@
   "main": "index.ts",
   "scripts": {
     "build": "tsc",
-    "start": "cross-env NODE_ENV=production node dist/index.js",
-    "start:render": "node dist/index.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "start": "node dist/index.js",
     "dev": "nodemon"
   },
   "keywords": [
@@ -17,22 +16,19 @@
     "eslint",
     "prettier"
   ],
-  "author": "Juan Manuel Ledesma Rangel",
+  "author": "Alfredo Alejandro Soto Herrera",
   "license": "MIT",
-  "description": "Proyecto completo con Express para la materia de IoT 2024 Tec de Monterrey en el módulo de bases de datos",
+  "description": "Proyecto completo con express para la materia IoT 2024",
   "dependencies": {
     "dotenv": "^16.4.5",
-    "dotenv-flow": "^4.1.0",
-    "express": "^4.21.0",
-    "mysql2": "^3.11.3",
-    "zod": "^3.23.8"
+    "express": "^4.21.1",
+    "mysql2": "^3.11.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.11.1",
     "@tsconfig/node20": "^20.1.4",
     "@types/express": "^5.0.0",
-    "@types/node": "^22.7.5",
-    "cross-env": "^7.0.3",
+    "@types/node": "^22.7.6",
     "eslint": "^9.11.1",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
