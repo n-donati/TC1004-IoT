@@ -10,8 +10,11 @@ const app = express();
 // Middleware para parsear JSON
 app.use(express.json());
 
+console.log("Testing...");
+
 app.use("/student", studentRouter);
 
 app.listen(process.env.SERVER_PORT, function () {
   console.log("Escuchando puerto " + process.env.SERVER_PORT);
 });
+
