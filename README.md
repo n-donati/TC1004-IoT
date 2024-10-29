@@ -32,7 +32,7 @@ Ideal para desarrolladores que buscan una base sólida y bien estructurada para 
 
 ## 👨‍💻 Autores
 
-- **Alejandro Soto** - _Desarrollador Principal_ - [GitHub](https://github.com/AlejandroSH1)
+- **Mateo Minghi** - _Desarrollador Principal_ - [GitHub](https://github.com/juanma)
 - **Equipo de Desarrollo** - _Contribuidores_
 
 ## 📂 Estructura del Proyecto

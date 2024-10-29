@@ -1,5 +1,5 @@
 {
-  "name": "mvc-express",
+  "name": "express2",
   "version": "1.0.0",
   "main": "index.ts",
   "scripts": {
@@ -16,19 +16,19 @@
     "eslint",
     "prettier"
   ],
-  "author": "Alfredo Alejandro Soto Herrera",
+  "author": "Mateo Minghi Vega",
   "license": "MIT",
-  "description": "Proyecto completo con express para la materia IoT 2024",
+  "description": "Plantilla de proyecto",
   "dependencies": {
     "dotenv": "^16.4.5",
-    "express": "^4.21.1",
+    "express": "^4.21.0",
     "mysql2": "^3.11.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.11.1",
     "@tsconfig/node20": "^20.1.4",
     "@types/express": "^5.0.0",
-    "@types/node": "^22.7.6",
+    "@types/node": "^22.7.5",
     "eslint": "^9.11.1",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",

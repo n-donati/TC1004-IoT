@@ -19,8 +19,8 @@ export const insertStudent = async (student: Student): Promise<Student> => {
     grade_level,
   } = student;
   const [result] = await pool.query<ResultSetHeader>(
-    `INSERT INTO students (first_name, last_name, date_of_birth, email, address, phone, gender, grade_level) 
-     VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+    `INSERT INTO students (first_name, last_name, date_of_birth, email, address, phone, gender, grade_level)
+  VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
     [
       first_name,
       last_name,
@@ -52,15 +52,15 @@ export const updateStudent = async (
   } = student;
   await pool.query<ResultSetHeader>(
     `UPDATE students
-     SET first_name = ?, 
-         last_name = ?, 
-         date_of_birth = ?, 
-         email = ?, 
-         address = ?, 
-         phone = ?, 
-         gender = ?, 
-         grade_level = ?
-     WHERE id = ?;`,
+  SET first_name = ?,
+  last_name = ?,
+  date_of_birth = ?,
+  email = ?,
+  address = ?,
+  phone = ?,
+  gender = ?,
+  grade_level = ?
+  WHERE id = ?;`,
     [
       first_name,
       last_name,
@@ -73,7 +73,6 @@ export const updateStudent = async (
       id,
     ],
   );
-
   return { id, ...student };
 };
 

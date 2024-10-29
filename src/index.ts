@@ -7,9 +7,7 @@ config();
 
 const app = express();
 
-// Middleware para parsear JSON
 app.use(express.json());
-
 app.use("/student", studentRouter);
 
 app.listen(process.env.SERVER_PORT, function () {

@@ -11,7 +11,5 @@ const configOptions: ConnectionOptions = {
   database: process.env.MYSQL_DATABASE,
   port: Number(process.env.MYSQL_PORT) || 3306,
 };
-
 const pool = mysql.createPool(configOptions);
-
 export default pool;
